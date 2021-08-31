@@ -1,0 +1,393 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Time - Aquarius Cookbook</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../../preface.html"><strong aria-hidden="true">1.</strong> Preface</a></li><li class="chapter-item expanded "><a href="../../ackn.html"><strong aria-hidden="true">2.</strong> Acknowledgement</a></li><li class="chapter-item expanded "><a href="../../profile.html"><strong aria-hidden="true">3.</strong> What is Aquarius</a></li><li class="chapter-item expanded "><a href="../../reserved.html"><strong aria-hidden="true">4.</strong> Reserved</a></li><li class="chapter-item expanded "><a href="../../component.html"><strong aria-hidden="true">5.</strong> Components</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../comment.html"><strong aria-hidden="true">5.1.</strong> Comment</a></li><li class="chapter-item expanded "><a href="../../require.html"><strong aria-hidden="true">5.2.</strong> Require</a></li><li class="chapter-item expanded "><a href="../../definition.html"><strong aria-hidden="true">5.3.</strong> Definition</a></li><li class="chapter-item expanded "><a href="../../assignment.html"><strong aria-hidden="true">5.4.</strong> Assignment</a></li><li class="chapter-item expanded "><a href="../../calling.html"><strong aria-hidden="true">5.5.</strong> Calling</a></li><li class="chapter-item expanded "><a href="../../controll.html"><strong aria-hidden="true">5.6.</strong> Controll flow</a></li></ol></li><li class="chapter-item expanded "><a href="../../builtin.html"><strong aria-hidden="true">6.</strong> Builtin</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../builtin/nil.html"><strong aria-hidden="true">6.1.</strong> Nil</a></li><li class="chapter-item expanded "><a href="../../builtin/true.html"><strong aria-hidden="true">6.2.</strong> True</a></li><li class="chapter-item expanded "><a href="../../builtin/false.html"><strong aria-hidden="true">6.3.</strong> False</a></li><li class="chapter-item expanded "><a href="../../builtin/int.html"><strong aria-hidden="true">6.4.</strong> Int</a></li><li class="chapter-item expanded "><a href="../../builtin/float.html"><strong aria-hidden="true">6.5.</strong> Float</a></li><li class="chapter-item expanded "><a href="../../builtin/string.html"><strong aria-hidden="true">6.6.</strong> String</a></li><li class="chapter-item expanded "><a href="../../builtin/list.html"><strong aria-hidden="true">6.7.</strong> List</a></li><li class="chapter-item expanded "><a href="../../builtin/dict.html"><strong aria-hidden="true">6.8.</strong> Dict</a></li><li class="chapter-item expanded "><a href="../../builtin/regexp.html"><strong aria-hidden="true">6.9.</strong> RegExp</a></li><li class="chapter-item expanded "><a href="../../builtin/range.html"><strong aria-hidden="true">6.10.</strong> Range</a></li><li class="chapter-item expanded "><a href="../../builtin/error.html"><strong aria-hidden="true">6.11.</strong> Error</a></li><li class="chapter-item expanded "><a href="../../builtin/puts.html"><strong aria-hidden="true">6.12.</strong> puts</a></li><li class="chapter-item expanded "><a href="../../builtin/show.html"><strong aria-hidden="true">6.13.</strong> show</a></li><li class="chapter-item expanded "><a href="../../builtin/noop.html"><strong aria-hidden="true">6.14.</strong> noop</a></li><li class="chapter-item expanded "><a href="../../builtin/assert.html"><strong aria-hidden="true">6.15.</strong> assert</a></li></ol></li><li class="chapter-item expanded "><a href="../../lib.html"><strong aria-hidden="true">7.</strong> Lib</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../lib/math.html"><strong aria-hidden="true">7.1.</strong> math</a></li><li class="chapter-item expanded "><a href="../../lib/os.html"><strong aria-hidden="true">7.2.</strong> os</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../lib/os/process.html"><strong aria-hidden="true">7.2.1.</strong> Process</a></li><li class="chapter-item expanded "><a href="../../lib/os/processstate.html"><strong aria-hidden="true">7.2.2.</strong> ProcessState</a></li></ol></li><li class="chapter-item expanded "><a href="../../lib/fs.html"><strong aria-hidden="true">7.3.</strong> fs</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../lib/fs/file.html"><strong aria-hidden="true">7.3.1.</strong> File</a></li><li class="chapter-item expanded "><a href="../../lib/fs/filemode.html"><strong aria-hidden="true">7.3.2.</strong> FileMode</a></li><li class="chapter-item expanded "><a href="../../lib/fs/fileinfo.html"><strong aria-hidden="true">7.3.3.</strong> FileInfo</a></li></ol></li><li class="chapter-item expanded "><a href="../../lib/exec.html"><strong aria-hidden="true">7.4.</strong> exec</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../lib/exec/cmd.html"><strong aria-hidden="true">7.4.1.</strong> Cmd</a></li></ol></li><li class="chapter-item expanded "><a href="../../lib/http.html"><strong aria-hidden="true">7.5.</strong> http</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../lib/http/query.html"><strong aria-hidden="true">7.5.1.</strong> Query</a></li><li class="chapter-item expanded "><a href="../../lib/http/request.html"><strong aria-hidden="true">7.5.2.</strong> Request</a></li><li class="chapter-item expanded "><a href="../../lib/http/response.html"><strong aria-hidden="true">7.5.3.</strong> Response</a></li><li class="chapter-item expanded "><a href="../../lib/http/cookie.html"><strong aria-hidden="true">7.5.4.</strong> Cookie</a></li><li class="chapter-item expanded "><a href="../../lib/http/client.html"><strong aria-hidden="true">7.5.5.</strong> Client</a></li></ol></li><li class="chapter-item expanded "><a href="../../lib/time.html"><strong aria-hidden="true">7.6.</strong> time</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../lib/time/time.html" class="active"><strong aria-hidden="true">7.6.1.</strong> Time</a></li><li class="chapter-item expanded "><a href="../../lib/time/duration.html"><strong aria-hidden="true">7.6.2.</strong> Duration</a></li><li class="chapter-item expanded "><a href="../../lib/time/timer.html"><strong aria-hidden="true">7.6.3.</strong> Timer</a></li><li class="chapter-item expanded "><a href="../../lib/time/ticker.html"><strong aria-hidden="true">7.6.4.</strong> Ticker</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.7.</strong> encoding</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../lib/encoding/base32.html"><strong aria-hidden="true">7.7.1.</strong> base32</a></li><li class="chapter-item expanded "><a href="../../lib/encoding/base64.html"><strong aria-hidden="true">7.7.2.</strong> base64</a></li><li class="chapter-item expanded "><a href="../../lib/encoding/json.html"><strong aria-hidden="true">7.7.3.</strong> json</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.8.</strong> crypto</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../lib/crypto/md5.html"><strong aria-hidden="true">7.8.1.</strong> md5</a></li><li class="chapter-item expanded "><a href="../../lib/crypto/sha1.html"><strong aria-hidden="true">7.8.2.</strong> sha1</a></li><li class="chapter-item expanded "><a href="../../lib/crypto/sha256.html"><strong aria-hidden="true">7.8.3.</strong> sha256</a></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.</strong> Miscellaneous</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../download.html"><strong aria-hidden="true">8.1.</strong> Downloads</a></li><li class="chapter-item expanded "><a href="../../vscode-plugin.html"><strong aria-hidden="true">8.2.</strong> VSCode Plugin</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Aquarius Cookbook</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="timetime"><a class="header" href="#timetime">time/Time</a></h2>
+<h3 id="the-api-of-timetime-module"><a class="header" href="#the-api-of-timetime-module">The API of <code>time/Time</code> module:</a></h3>
+<ul>
+<li><a href="#==">==</a></li>
+<li><a href="#!=">!=</a></li>
+<li><a href="#to_s">to_s</a></li>
+<li><a href="#to_b">to_b</a></li>
+<li><a href="#type">type</a></li>
+<li><a href="#formats">ANSIC</a></li>
+<li><a href="#formats">UnixDate</a></li>
+<li><a href="#formats">RubyDate</a></li>
+<li><a href="#formats">RFC822</a></li>
+<li><a href="#formats">RFC822Z</a></li>
+<li><a href="#formats">RFC850</a> </li>
+<li><a href="#formats">RFC1123</a></li>
+<li><a href="#formats">RFC1123Z</a></li>
+<li><a href="#formats">RFC3339</a></li>
+<li><a href="#formats">RFC3339Nano</a></li>
+<li><a href="#formats">Kitchen</a></li>
+<li><a href="#formats">Stamp</a></li>
+<li><a href="#formats">StampMilli</a></li>
+<li><a href="#formats">StampMicro</a></li>
+<li><a href="#formats">StampNano</a></li>
+</ul>
+<h3 id="the-api-of-time-value"><a class="header" href="#the-api-of-time-value">The API of <code>time</code> value:</a></h3>
+<ul>
+<li><a href="#==">==</a></li>
+<li><a href="#!=">!=</a></li>
+<li><a href="#to_s">to_s</a></li>
+<li><a href="#to_b">to_b</a></li>
+<li><a href="#type">type</a></li>
+<li><a href="#format">format</a></li>
+<li><a href="#clock">clock</a></li>
+<li><a href="#year">year</a></li>
+<li><a href="#month">month</a></li>
+<li><a href="#day">day</a></li>
+<li><a href="#hour">hour</a></li>
+<li><a href="#minute">minute</a></li>
+<li><a href="#second">second</a></li>
+<li><a href="#nanosecond">nanosecond</a></li>
+<li><a href="#weekday">weekday</a></li>
+<li><a href="#date">date</a></li>
+<li><a href="#iso_week">iso_week</a></li>
+<li><a href="#zero?">zero?</a></li>
+<li><a href="#local">local</a></li>
+<li><a href="#location">location</a></li>
+<li><a href="#zone">zone</a></li>
+<li><a href="#unix">unix</a></li>
+<li><a href="#unix_nano">unix_nano</a></li>
+<li><a href="#year_day">year_day</a></li>
+<li><a href="#UTC">UTC</a></li>
+<li><a href="#add_date">add_date</a></li>
+<li><a href="#add">add</a></li>
+<li><a href="#sub">sub</a></li>
+<li><a href="#round">round</a></li>
+<li><a href="#truncate">truncate</a></li>
+<li><a href="#in">in</a></li>
+<li><a href="#after?">after?</a></li>
+<li><a href="#before?">before?</a></li>
+<li><a href="#equal?">equal?</a></li>
+</ul>
+<h4 id=""><a class="header" href="#">==</a></h4>
+<pre><code class="language-aquarius">(Time == any) -&gt; bool
+</code></pre>
+<h4 id="-1"><a class="header" href="#-1">!=</a></h4>
+<pre><code class="language-aquarius">(Time != any) -&gt; bool
+</code></pre>
+<h4 id="to_s"><a class="header" href="#to_s">to_s</a></h4>
+<pre><code class="language-aquarius">(Time to_s) -&gt; string
+</code></pre>
+<h4 id="to_b"><a class="header" href="#to_b">to_b</a></h4>
+<pre><code class="language-aquarius">(Time to_b) -&gt; true
+</code></pre>
+<h4 id="type"><a class="header" href="#type">type</a></h4>
+<pre><code class="language-aquarius">(Time type) -&gt; string
+</code></pre>
+<h4 id="formats"><a class="header" href="#formats">formats</a></h4>
+<table><thead><tr><th>key</th><th>value</th></tr></thead><tbody>
+<tr><td>ANSIC</td><td>Mon Jan _2 15:04:05 2006</td></tr>
+<tr><td>UnixDate</td><td>Mon Jan _2 15:04:05 MST 2006</td></tr>
+<tr><td>RubyDate</td><td>Mon Jan 02 15:04:05 -0700 2006</td></tr>
+<tr><td>RFC822</td><td>02 Jan 06 15:04 MST</td></tr>
+<tr><td>RFC822Z</td><td>02 Jan 06 15:04 -0700</td></tr>
+<tr><td>RFC850</td><td>Monday, 02-Jan-06 15:04:05 MST</td></tr>
+<tr><td>RFC1123</td><td>Mon, 02 Jan 2006 15:04:05 MST</td></tr>
+<tr><td>RFC1123Z</td><td>Mon, 02 Jan 2006 15:04:05 -0700</td></tr>
+<tr><td>RFC3339</td><td>2006-01-02T15:04:05Z07:00</td></tr>
+<tr><td>RFC3339Nano</td><td>2006-01-02T15:04:05.999999999Z07:00</td></tr>
+<tr><td>Kitchen</td><td>3:04PM</td></tr>
+<tr><td>Stamp</td><td>Jan _2 15:04:05</td></tr>
+<tr><td>StampMilli</td><td>Jan _2 15:04:05.000</td></tr>
+<tr><td>StampMicro</td><td>Jan _2 15:04:05.000000</td></tr>
+<tr><td>StampNano</td><td>Jan _2 15:04:05.000000000</td></tr>
+</tbody></table>
+<h4 id="format"><a class="header" href="#format">format</a></h4>
+<p>Returns a textual representation of the time value formatted according to <a href="#formats">layout</a>.</p>
+<pre><code class="language-aquarius">(Time format layout(string)) -&gt; string
+</code></pre>
+<h4 id="clock"><a class="header" href="#clock">clock</a></h4>
+<p>Returns the hour, minute, and second within the day specified by <code>Time</code>.</p>
+<pre><code class="language-aquarius">(Time clock) -&gt; [hour(int),min(int),sec(int)]
+</code></pre>
+<h4 id="year"><a class="header" href="#year">year</a></h4>
+<p>Returns the year in which <code>Time</code> occurs.</p>
+<pre><code class="language-aquarius">(Time year) -&gt; int
+</code></pre>
+<h4 id="month"><a class="header" href="#month">month</a></h4>
+<p>Returns the month of the year specified by <code>Time</code>.</p>
+<pre><code class="language-aquarius">(Time month) -&gt; [int, string]
+</code></pre>
+<h4 id="day"><a class="header" href="#day">day</a></h4>
+<p>Returns the day of the month specified by <code>Time</code>.</p>
+<pre><code class="language-aquarius">(Time day) -&gt; int
+</code></pre>
+<h4 id="hour"><a class="header" href="#hour">hour</a></h4>
+<p>Returns the hour within the day specified by <code>Time</code>, in the range [0, 23].</p>
+<pre><code class="language-aquarius">(Time hour) -&gt; int
+</code></pre>
+<h4 id="minute"><a class="header" href="#minute">minute</a></h4>
+<p>Returns the minute offset within the hour specified by <code>Time</code>, in the range [0, 59].</p>
+<pre><code class="language-aquarius">(Time minute) -&gt; int
+</code></pre>
+<h4 id="second"><a class="header" href="#second">second</a></h4>
+<p>Returns the second offset within the minute specified by <code>Time</code>, in the range [0, 59].</p>
+<pre><code class="language-aquarius">(Time second) -&gt; int
+</code></pre>
+<h4 id="nanosecond"><a class="header" href="#nanosecond">nanosecond</a></h4>
+<p>Returns the nanosecond offset within the second specified by <code>Time</code>, in the range [0, 999999999].</p>
+<pre><code class="language-aquarius">(Time nanosecond) -&gt; int
+</code></pre>
+<h4 id="weekday"><a class="header" href="#weekday">weekday</a></h4>
+<p>Returns the day of the week specified by <code>Time</code>.</p>
+<pre><code class="language-aquarius">(Time weekday) -&gt; [int, string]
+</code></pre>
+<h4 id="date"><a class="header" href="#date">date</a></h4>
+<p>Returns the year, month, and day in which <code>Time</code> occurs.</p>
+<pre><code class="language-aquarius">(Time date) -&gt; [int, [int, string], int]
+</code></pre>
+<h4 id="iso_week"><a class="header" href="#iso_week">iso_week</a></h4>
+<p>Returns the ISO 8601 year and week number in which <code>Time</code> occurs. Week ranges from 1 to 53. 
+Jan 01 to Jan 03 of year n might belong to week 52 or 53 of year n-1, and Dec 29 to Dec 31 
+might belong to week 1 of year n+1.</p>
+<pre><code class="language-aquarius">(Time iso_week) -&gt; [int, int]
+</code></pre>
+<h4 id="zero"><a class="header" href="#zero">zero?</a></h4>
+<p>Reports whether <code>Time</code> represents the zero time instant, January 1, year 1, 00:00:00 UTC.</p>
+<pre><code class="language-aquarius">(Time zero?) -&gt; bool
+</code></pre>
+<h4 id="local"><a class="header" href="#local">local</a></h4>
+<p>Returns <code>Time</code> with the location set to local time.</p>
+<pre><code class="language-aquarius">(Time local) -&gt; time
+</code></pre>
+<h4 id="location"><a class="header" href="#location">location</a></h4>
+<p>Returns the time zone information associated with <code>Time</code>.</p>
+<pre><code class="language-aquarius">(Time location) -&gt; time
+</code></pre>
+<h4 id="zone"><a class="header" href="#zone">zone</a></h4>
+<p>Computes the time zone in effect at time <code>Time</code>, returning the 
+abbreviated name of the zone (such as &quot;CET&quot;) and its offset 
+in seconds east of UTC.</p>
+<pre><code class="language-aquarius">(Time zone) -&gt; [string, int]
+</code></pre>
+<h4 id="unix"><a class="header" href="#unix">unix</a></h4>
+<p>Returns t as a Unix time, the number of seconds elapsed since January 1, 1970 UTC. 
+The result does not depend on the location associated with <code>Time</code>.</p>
+<pre><code class="language-aquarius">(Time unix) -&gt; int
+</code></pre>
+<h4 id="unix_nano"><a class="header" href="#unix_nano">unix_nano</a></h4>
+<p>Returns <code>Time</code> as a Unix time, the number of nanoseconds elapsed since January 1, 1970 UTC.</p>
+<pre><code class="language-aquarius">(Time unix_nano) -&gt; int
+</code></pre>
+<h4 id="year_day"><a class="header" href="#year_day">year_day</a></h4>
+<p>Returns the day of the year specified by <code>Time</code>, in the range [1,365] for non-leap years, 
+and [1,366] in leap years.</p>
+<pre><code class="language-aquarius">(Time year_day) -&gt; int
+</code></pre>
+<h4 id="utc"><a class="header" href="#utc">UTC</a></h4>
+<p>Returns <code>Time</code> with the location set to UTC.</p>
+<pre><code class="language-aquarius">(Time UTC) -&gt; time
+</code></pre>
+<h4 id="add_date"><a class="header" href="#add_date">add_date</a></h4>
+<p>Returns <code>Time</code> with the location set to UTC.</p>
+<pre><code class="language-aquarius">(Time add_date year(int) month(int) day(int)) -&gt; time
+</code></pre>
+<h4 id="add"><a class="header" href="#add">add</a></h4>
+<p>Returns the time <code>Time</code>+<code>dur</code>.</p>
+<pre><code class="language-aquarius">(Time add dur(duration)) -&gt; time
+</code></pre>
+<h4 id="sub"><a class="header" href="#sub">sub</a></h4>
+<p>returns the duration <code>Time</code>-<code>time</code>.</p>
+<pre><code class="language-aquarius">(Time sub time(time)) -&gt; duration
+</code></pre>
+<h4 id="round"><a class="header" href="#round">round</a></h4>
+<p>Returns the result of rounding <code>Time</code> to the nearest multiple of <code>dur</code> (since the zero time).</p>
+<pre><code class="language-aquarius">(Time round dur(duration)) -&gt; time
+</code></pre>
+<h4 id="truncate"><a class="header" href="#truncate">truncate</a></h4>
+<p>Returns the result of rounding <code>Time</code> down to a multiple of <code>dur</code> (since the zero time).</p>
+<pre><code class="language-aquarius">(Time truncate dur(duration)) -&gt; time
+</code></pre>
+<h4 id="in"><a class="header" href="#in">in</a></h4>
+<p>Returns a copy of t representing the same time instant, but with the copy's location information 
+set to <code>loc</code> for display purposes.</p>
+<pre><code class="language-aquarius">(Time in loc(string)) -&gt; time
+</code></pre>
+<h4 id="after"><a class="header" href="#after">after?</a></h4>
+<p>reports whether the time instant <code>Time</code> is after <code>t</code>.</p>
+<pre><code class="language-aquarius">(Time after? t(time)) -&gt; bool
+</code></pre>
+<h4 id="before"><a class="header" href="#before">before?</a></h4>
+<p>reports whether the time instant <code>Time</code> is before <code>t</code>.</p>
+<pre><code class="language-aquarius">(Time before? t(time)) -&gt; bool
+</code></pre>
+<h4 id="equal"><a class="header" href="#equal">equal?</a></h4>
+<p>reports whether <code>Time</code> and <code>t</code> represent the same time instant.</p>
+<pre><code class="language-aquarius">(Time equal? t(time)) -&gt; bool
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../lib/time.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../../lib/time/duration.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../lib/time.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../../lib/time/duration.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>
